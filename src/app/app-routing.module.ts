@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { EnviarPage } from './enviar/enviar.page';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
-  { path: 'enviar', loadChildren: './enviar/enviar.module#EnviarPageModule' },
+  { path: 'enviar', component: EnviarPage },
 ];
 
 @NgModule({

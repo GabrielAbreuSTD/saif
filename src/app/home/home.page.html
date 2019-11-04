@@ -1,15 +1,17 @@
+
 <ion-header>
   <ion-toolbar>
     <ion-title>
-     Tela inicial - Seção
+     SAIF- Sessão
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-img src="../assets/icon/logo.png"></ion-img>
 
   <ion-item>
-    <ion-label position="floating">CPF(ADM):</ion-label>
+    <ion-label position="floating">USUARIO(ADM):</ion-label>
     <ion-input></ion-input>
   </ion-item>
 
@@ -17,7 +19,13 @@
     <ion-label position="floating">SENHA:</ion-label>
     <ion-input></ion-input>
   </ion-item>
+<br>
+<a (click)="redefinir()">Esqueceu a senha?</a><br>
+  <br>
+  <br>
+  <b>Não possui uma conta?</b> <a href="cadastro" > CADASTRE-SE</a><br>
 
 <ion-button href="enviar">ACESSAR</ion-button>
+
 
 </ion-content>
