@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>salvar-usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-input type="text" name="cpf" [(ngModel)]="usuario.cpf"></ion-input>
+  <ion-input type="text" name="senha" [(ngModel)]="usuario.senha"></ion-input>
+  <ion-button (click)="salvar()">salvar</ion-button>
+
+</ion-content>

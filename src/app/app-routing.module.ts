@@ -6,7 +6,9 @@ import { EnviarPage } from './enviar/enviar.page';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
-  { path: 'enviar', component: EnviarPage },
+  { path: 'enviar', component: EnviarPage },  { path: 'cadastro', loadChildren: './cadastro/cadastro.module#CadastroPageModule' },
+  { path: 'salvar-usuario', loadChildren: './usuario/salvar-usuario/salvar-usuario.module#SalvarUsuarioPageModule' },
+
 ];
 
 @NgModule({
