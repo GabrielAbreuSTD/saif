@@ -8,6 +8,9 @@ const routes: Routes = [
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: 'enviar', component: EnviarPage },  { path: 'cadastro', loadChildren: './cadastro/cadastro.module#CadastroPageModule' },
   { path: 'salvar-usuario', loadChildren: './usuario/salvar-usuario/salvar-usuario.module#SalvarUsuarioPageModule' },
+  { path: 'principal', loadChildren: './principal/principal.module#PrincipalPageModule' },
+  { path: 'confirma', loadChildren: './confirma/confirma.module#ConfirmaPageModule' },
+  { path: 'solicitacao', loadChildren: './solicitacao/solicitacao.module#SolicitacaoPageModule' },
 
 ];
 

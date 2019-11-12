@@ -18,7 +18,7 @@ export class SalvarUsuarioPage implements OnInit {
   salvar() {
     this.banco.list('usuario').push(this.usuario);
     this.usuario = new Usuario();
-    alert("salvao com sucesso");
+    alert("salvo com sucesso");
   }
 
 
