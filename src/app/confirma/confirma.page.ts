@@ -9,7 +9,6 @@ export class ConfirmaPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
