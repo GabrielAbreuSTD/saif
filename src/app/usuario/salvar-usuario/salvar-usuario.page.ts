@@ -15,14 +15,14 @@ export class SalvarUsuarioPage implements OnInit {
 
   usuario: Usuario = new Usuario();
 
-  constructor(private banco: AngularFireDatabase) { }
+  constructor(private banco: AngularFireDatabase, private rota: Router) { }
 
   ngOnInit() { }
 
   salvar(){
   this.banco.list('usuario').push(this.usuario);
   this.usuario = new Usuario();
-  alert("salvo com sucesso amado");
+  this.rota.navigate(['usuario-listar']);
   }
-  
+
 }

@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'principal', loadChildren: './principal/principal.module#PrincipalPageModule' },
   { path: 'confirma', loadChildren: './confirma/confirma.module#ConfirmaPageModule' },
   { path: 'solicitacao', loadChildren: './solicitacao/solicitacao.module#SolicitacaoPageModule' },
+  { path: 'usuario-listar', loadChildren: './usuario/usuario-listar/usuario-listar.module#UsuarioListarPageModule' },
 
 ];
 
