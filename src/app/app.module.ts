@@ -8,12 +8,14 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { EnviarPage } from './enviar/enviar.page';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ListaComponent } from './lista/lista.component';
+import { AngularFireAuth } from 'angularfire2/auth';
+
 
 @NgModule({
-  declarations: [AppComponent, EnviarPage],
+  declarations: [AppComponent, ListaComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireDatabaseModule, AngularFireModule.initializeApp({
     apiKey: "AIzaSyCZCxn5lX7mbTVnPKmU38F-msj33gn2WyY",
@@ -28,6 +30,8 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
+    AngularFireAuth,
+
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

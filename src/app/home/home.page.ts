@@ -5,8 +5,7 @@ import { Usuario } from '../usuario/entidade/usuario';
 
 import { AngularFireAuth } from "angularfire2/auth";
 
-@Component({
-  selector: 'app-home',
+@Component({  selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })

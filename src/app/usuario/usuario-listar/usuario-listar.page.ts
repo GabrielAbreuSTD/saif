@@ -20,12 +20,17 @@ export class UsuarioListarPage implements OnInit {
 
   constructor(private fire: AngularFireDatabase, private rota: Router) {
 
-    this.listaUsuario = this.fire.list<Usuario>('usuario').snapshotChanges().pipe(
-    map( lista => lista.map(linha => ({ key: linha.payload.key, ...linha.payload.val()})))
+    this.listaUsuario = this.fire.list<Usuario>('solicitar').snapshotChanges().pipe(
+      map(lista => lista.map(linha => ({ key: linha.payload.key, ...linha.payload.val() })))
     );
 
   }
 
   ngOnInit() { }
+
+  excluir(key) {
+    this.fire.list<Usuario>('solicitar').remove(key);
+
+  }
 
 }

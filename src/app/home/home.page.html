@@ -8,32 +8,33 @@
 
 <ion-content>
 
+
   <ion-card>
 
     <div class="ion-padding">
+      <h1>LOGIN</h1>
 
       <ion-img src="../assets/icon/logo.png"></ion-img>
 
       <ion-item>
-        <ion-label position="floating">email:</ion-label>
-        <ion-input></ion-input>
+        <ion-label position="floating">EMAIL:</ion-label>
+        <ion-input   type="text" [(ngModel)] = "email" ></ion-input>
       </ion-item>
 
+
       <ion-item>
-        <ion-label position="floating">senha: </ion-label>
-        <ion-input></ion-input>
+        <ion-label position="floating">SENHA:</ion-label>
+        <ion-input  type="password" [(ngModel)] = "senha" ></ion-input>
       </ion-item>
 
       <br>
       <a (click)="redefinir()">Esqueceu a senha?</a><br>
       <br>
       <br>
-      <b>Não possui uma conta?</b> <a href="cadastro">cadastre-se</a><br>
 
-      <ion-button href='principal'>acessar</ion-button>
+      <ion-button  color="success" href='principal'>ACESSAR</ion-button>
 
     </div>
   </ion-card>
-
 
 </ion-content>

@@ -1,16 +1,34 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Usuarios cadastrados</ion-title>
+  <ion-toolbar color='danger'>
+    <ion-title>SOLICITAÇÕES</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let usuario of listaUsuario | async">
+  <ion-button href="principal" color="success">
+    <ion-icon name="backspace"></ion-icon>
+  </ion-button>
 
-      <ion-label>{{ usuario.email }}</ion-label>
+  <ion-card>
+    <div class="ion-padding">
+      <ion-list>
+        <ion-item *ngFor="let solicitar of listaUsuario | async">
 
-    </ion-item>
-  </ion-list>
 
+          <ion-label> <b> {{ solicitar.ra }} </b>
+            <br> {{ solicitar.cpf }} <br />
+            <b> {{ solicitar.data }} </b>
+            <br> {{ solicitar.horario }} <br />
+            <b> {{ solicitar.motivo }} </b>
+            <br> {{ solicitar.responsavel }}</ion-label> <br />
+
+            <ion-button color='success' href="principal"><ion-icon name="checkmark-circle"></ion-icon></ion-button>
+            <ion-button color='dark' (click)="excluir(solicitar.key)"><ion-icon color='danger'name="trash"></ion-icon></ion-button>
+
+
+        </ion-item>
+
+      </ion-list>
+    </div>
+  </ion-card>
 </ion-content>
